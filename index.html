@@ -47,6 +47,7 @@
         .services-container { max-width: 1200px; margin: 0 auto; }
         
         /* Carrossel Casamento */
+        .carousel-caption { text-align: center; font-size: 1.5rem; font-weight: 700; color: var(--azul-principal); margin-bottom: 1rem; }
         .carousel-wrapper { position: relative; width: 100%; max-width: 600px; margin: 0 auto 4rem auto; overflow: hidden; }
         .carousel-container { display: flex; transition: transform 0.5s ease-in-out; }
         .carousel-slide { min-width: 100%; box-sizing: border-box; padding: 10px; }
@@ -55,18 +56,23 @@
         .carousel-btn:hover { background-color: var(--azul-principal); }
         .prev { left: 10px; }
         .next { right: 10px; }
-        .carousel-caption { text-align: center; margin-top: 10px; font-weight: 600; color: var(--azul-principal); }
 
-        /* Grid Serviços Restantes (CPF) */
+        /* Grid Outros Serviços */
         .services-grid-other { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .service-card { background: var(--branco); padding: 2.5rem 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--dourado); transition: transform 0.3s; }
         .service-card:hover { transform: translateY(-5px); }
         .service-card h3 { color: var(--azul-principal); margin-bottom: 1rem; }
 
+        /* Contato - CORRIGIDO: Centralizado */
+        .contact { background-color: var(--branco); text-align: center; padding-bottom: 3rem;}
+        .contact-content { display: inline-block; text-align: left; margin: 0 auto; }
+        .contact-info { font-size: 1.2rem; margin: 1rem 0; line-height: 1.8; }
+        .btn-contato-container { text-align: center; margin-top: 2rem; }
+
         /* Rodapé */
         footer { background-color: var(--azul-principal); color: var(--branco); text-align: center; padding: 2rem; font-size: 0.9rem; }
 
-        @media (max-width: 768px) { header { flex-direction: column; gap: 1rem; } .about-container { flex-direction: column; text-align: center; } }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 1rem; } .about-container { flex-direction: column; text-align: center; } .contact-content { text-align: center; } }
     </style>
 </head>
 <body>
@@ -92,7 +98,7 @@
         <div class="about-container">
             <img src="LOGO.jfif" alt="SagraCoeur Cartório & Consular Brasil" class="about-logo">
             <div class="about-text">
-                <p>A <strong>SagraCoeur</strong> é especializada em aproximar você dos cartórios brasileiros estando na Europa. Cuidamos de todo o processo legal com total segurança jurídica, transparência e agilidade para que você resolva suas pendências sem preocupação.</p>
+                <p>A <strong>SagraCoeur</strong> é especializada em aproximar você dos cartórios brasileiros estando na Europa. Sabemos o quanto a burocracia à distância pode ser complexa. Por isso, cuidamos de todo o processo legal com total segurança jurídica, transparência e agilidade para que você resolva suas pendências sem preocupação.</p>
             </div>
         </div>
     </section>
@@ -101,7 +107,6 @@
         <div class="section-title"><h2>Nossos Serviços</h2></div>
 
         <div class="services-container">
-            <!-- Carrossel de Casamento -->
             <div class="carousel-caption">Casamento e Trâmites de Cartório Civil</div>
             <div class="carousel-wrapper">
                 <div class="carousel-container">
@@ -114,37 +119,40 @@
                 <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
 
-            <!-- Grid de Outros Serviços (CPF) -->
             <div class="services-grid-other">
-                <div class="service-card">
+                 <div class="service-card">
                     <h3>CPF: Regularização e Inscrição</h3>
-                    <p>Realizamos todo o processo de regularização, inscrição ou alteração de dados do CPF junto à Receita Federal, direto da Europa.</p>
+                    <p>Processos junto à Receita Federal, inscrição, regularização ou alteração de dados direto da Europa.</p>
                 </div>
                 <div class="service-card">
                     <h3>Procurações Públicas</h3>
-                    <p>Elaboração e trâmites para procurações públicas válidas no Brasil para as mais diversas finalidades.</p>
+                    <p>Elaboração de documentos para representação em transações imobiliárias, bancos, inventários e órgãos públicos no Brasil.</p>
                 </div>
-                 <div class="service-card">
+                <div class="service-card">
                     <h3>Certificado Digital</h3>
-                    <p>Emissão e renovação de certificados digitais (e-CPF e e-CNPJ) com atendimento assistido por videoconferência.</p>
+                    <p>Emissão e renovação (e-CPF e e-CNPJ) com atendimento assistido por videoconferência.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cartório Civil e Geral</h3>
+                    <p>Segunda via de certidões (nascimento, casamento), apostilamento de Haia e averbações.</p>
                 </div>
             </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="https://wa.me/393931667375?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn" target="_blank">Solicitar Orçamento Personalizado</a>
         </div>
     </section>
 
     <section id="contato" class="contact">
         <div class="section-title"><h2>Entre em Contato</h2></div>
-        <div class="contact-info">
-            <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
-            <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
-            <p><strong>Instagram:</strong> <a href="https://instagram.com/sagracoeurcartorio" target="_blank" style="color: var(--azul-principal); text-decoration: none;">@sagracoeurcartorio</a></p>
+        <!-- Bloco de contato centralizado -->
+        <div class="contact-content">
+            <div class="contact-info">
+                <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
+                <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/sagracoeurcartorio" target="_blank" style="color: var(--azul-principal); text-decoration: none;">@sagracoeurcartorio</a></p>
+            </div>
         </div>
-        <br>
-        <a href="https://wa.me/393931667375?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="btn" target="_blank">Fale Conosco no WhatsApp</a>
+        <div class="btn-contato-container">
+            <a href="https://wa.me/393931667375?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="btn" target="_blank">Fale Conosco no WhatsApp</a>
+        </div>
     </section>
 
     <footer>
@@ -158,22 +166,14 @@
             const container = wrapper.querySelector('.carousel-container');
             const slides = container.querySelectorAll('.carousel-slide');
             const slideWidth = slides[0].clientWidth;
-            
             let currentTransform = container.style.transform || 'translateX(0px)';
             let currentPosition = parseInt(currentTransform.match(/-?\d+/)[0]);
-            
             let maxPosition = -(slideWidth * (slides.length - 1));
             let targetPosition = currentPosition - (direction * slideWidth);
-
-            if (targetPosition > 0) {
-                targetPosition = maxPosition; // Loop para o final
-            } else if (targetPosition < maxPosition) {
-                targetPosition = 0; // Loop para o início
-            }
-
+            if (targetPosition > 0) targetPosition = maxPosition; 
+            else if (targetPosition < maxPosition) targetPosition = 0; 
             container.style.transform = `translateX(${targetPosition}px)`;
         }
     </script>
-
 </body>
 </html>
