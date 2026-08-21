@@ -146,48 +146,59 @@
             flex: 1;
         }
 
-        /* Serviços Grid (Texto e Ícones/Imagens) - MODIFICADO */
-        .services-grid {
+        /* Como Funciona (Novo) */
+        .how-it-works {
+            background-color: var(--cinza-claro);
+        }
+
+        .steps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .service-card {
+        .step-card {
             background: var(--branco);
-            padding: 2.5rem 2rem;
+            padding: 2rem 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--dourado);
-            transition: transform 0.3s;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
 
-        .service-card:hover {
+        .step-card:hover {
             transform: translateY(-5px);
         }
-        
-        /* MODIFICAÇÃO: Imagem maior e margem inferior ajustada */
-        .service-icon-img {
-            width: 150px; 
-            height: 150px; 
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 0.5rem; 
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--azul-principal);
+            color: var(--dourado);
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            border: 2px solid var(--dourado);
         }
 
-        .service-card h3 {
+        .step-card h3 {
+            font-size: 1.1rem;
             color: var(--azul-principal);
             margin-bottom: 0.5rem;
         }
-        
-        /* MODIFICAÇÃO: Parágrafo de descrição removido da exibição */
-        .service-card p {
-            display: none; 
+
+        .step-card p {
+            font-size: 0.95rem;
+            color: var(--texto-escuro);
         }
 
-        /* Galeria de Imagens Maiores (SERVISO.jpeg) - Mantida */
+        /* Galeria de Serviços */
         .services-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,7 +219,60 @@
             transform: scale(1.03);
         }
 
-        /* Rodapé de Contato (Centralizado) - MODIFICADO */
+        /* FAQ / Perguntas Frequentes (Novo) */
+        .faq-section {
+            background-color: var(--branco);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--cinza-claro);
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--dourado);
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            color: var(--azul-principal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--dourado);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+            color: var(--texto-escuro);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 1.5rem 1.2rem 1.5rem;
+        }
+
+        /* Rodapé de Contato */
         .contact-footer {
             background-color: var(--azul-principal);
             color: var(--branco);
@@ -245,11 +309,7 @@
             .hero h1 { font-size: 2rem; }
             .about-container { flex-direction: column; text-align: center; }
             .contact-content { text-align: center; }
-            
-            /* MODIFICAÇÃO: Fonte do contato menor no mobile */
-            .contact-content p {
-                font-size: 1rem; 
-            }
+            .contact-content p { font-size: 1rem; }
         }
     </style>
 </head>
@@ -263,7 +323,9 @@
         <nav>
             <a href="#inicio">Início</a>
             <a href="#sobre">Quem Somos</a>
+            <a href="#como-funciona">Como Funciona</a>
             <a href="#servicos">Serviços</a>
+            <a href="#faq">Dúvidas</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
@@ -288,6 +350,41 @@
         </div>
     </section>
 
+    <!-- Como Funciona (Adicionado com base nas imagens) -->
+    <section id="como-funciona" class="how-it-works">
+        <div class="section-title">
+            <h2>Como Funciona</h2>
+            <p>O passo a passo para resolver suas pendências do Brasil estando na Europa</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Passo 1</h3>
+                <p>Faremos a análise de suas necessidades via WhatsApp.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Passo 2</h3>
+                <p>Envio dos documentos necessários de forma digital e segura.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Passo 3</h3>
+                <p>Abertura do Certificado Digital para validação jurídica.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Passo 4</h3>
+                <p>Agendamento da sua videoconferência com o cartório competente ou advogado especialista.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h3>Passo 5</h3>
+                <p><strong>PRONTO!</strong> Receba seu documento digital via e-mail com total validade.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Nossos Serviços -->
     <section id="servicos">
         <div class="section-title">
@@ -295,9 +392,8 @@
             <p>Tudo o que você precisa em cartório geral e civil no Brasil</p>
         </div>
            
-        
-        <!-- Galeria de Imagens de Serviço (Mantida) -->
-        <div class="services-gallery" style="margin-top: 4rem;">
+        <!-- Galeria de Imagens de Serviço -->
+        <div class="services-gallery">
             <img src="CASAMENTO .jpeg" alt="Serviço SagraCoeur 1" class="service-img">
             <img src="SERVISO (3).jpeg" alt="Serviço SagraCoeur 2" class="service-img">
             <img src="SERVISO (4).jpeg" alt="Serviço SagraCoeur 3" class="service-img">
@@ -306,13 +402,34 @@
         </div>
     </section>
 
-    <!-- Rodapé de Contato (Centralizado) -->
+    <!-- FAQ / Perguntas Frequentes (Adicionado com base nas imagens) -->
+    <section id="faq" class="faq-section">
+        <div class="section-title">
+            <h2>Dúvidas Frequentes</h2>
+            <p>Tire suas principais dúvidas sobre o processo</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">É possível vender um imóvel no Brasil através de uma procuração?</div>
+                <div class="faq-answer">Sim, por meio de uma procuração pública específica lavrada em cartório brasileiro com o suporte de nossa equipe e certificado digital, você pode nomear alguém de sua confiança para representá-lo na venda.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Em quanto tempo a Procuração fica pronta?</div>
+                <div class="faq-answer">O prazo varia conforme o tipo de documento e a tramitação do cartório competente, mas todo o processo é acelerado e acompanhado de perto pela nossa assessoria.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Preciso enviar a procuração por Correio ou transportadora para o Brasil?</div>
+                <div class="faq-answer">Não. Com o certificado digital e a assinatura eletrônica em documentos nativos digitais ou via videoconferência notarial, o arquivo possui validade jurídica sem a necessidade de envio físico internacional por papel.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé de Contato -->
     <section id="contato" class="contact-footer">
         <div class="section-title" style="color: var(--branco);">
             <h2>Entre em Contato</h2>
             <p>Fale diretamente com nossa equipe</p>
         </div>
-        <!-- Bloco de informações centralizado (Fonte menor no mobile) -->
         <div class="contact-content">
             <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
             <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
@@ -328,6 +445,21 @@
         <p>&copy; 2026 SagraCoeur - Todos os direitos reservados.</p>
         <p style="margin-top: 0.5rem; color: var(--dourado);">Atendimento especializado na Europa</p>
     </div>
+
+    <!-- Script Simples para o Accordion do FAQ -->
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const currentlyActive = document.querySelector('.faq-item.active');
+                if(currentlyActive && currentlyActive !== item) {
+                    currentlyActive.classList.remove('active');
+                }
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
