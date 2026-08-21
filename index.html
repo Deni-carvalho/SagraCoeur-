@@ -3,69 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SagraCoeur | Soluções Cartoriais Inteligentes</title>
+    <title>SagraCoeur | Serviços Cartoriais no Brasil para Brasileiros na Europa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --azul: #1A365D;
+            --azul-principal: #1A365D;
             --dourado: #C5A880;
+            --dourado-hover: #b3956e;
             --branco: #FFFFFF;
-            --cinza: #F4F7F6;
+            --cinza-claro: #F8FAFC;
+            --texto-escuro: #2D3748;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        header { background: var(--azul); color: var(--branco); padding: 2rem; text-align: center; border-bottom: 4px solid var(--dourado); }
-        nav { background: var(--branco); padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--azul); font-weight: bold; }
-        .hero { padding: 4rem 2rem; background: var(--cinza); text-align: center; }
-        .btn-whats { background: var(--dourado); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px; }
-        .secao { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: var(--branco); }
-        footer { background: var(--azul); color: var(--branco); text-align: center; padding: 2rem; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--cinza-claro);
+            color: var(--texto-escuro);
+            line-height: 1.6;
+        }
+
+        /* Menu Superior */
+        header {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dourado);
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--branco);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dourado);
+        }
+
+        /* Seção Principal (Hero) */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--branco);
+            text-align: center;
+            padding: 9rem 1rem 6rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 span {
+            color: var(--dourado);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            font-weight: 300;
+        }
+
+        .btn {
+            background-color: var(--dourado);
+            color: var(--azul-principal);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--dourado-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 5rem 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--azul-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Quem Somos */
+        .about {
+            background-color: var(--branco);
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--branco);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--dourado);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--azul-principal);
+            margin-bottom: 1rem;
+        }
+
+        /* Contato */
+        .contact {
+            background-color: var(--branco);
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; padding: 1rem; }
+            nav a { margin: 0 0.5rem; font-size: 0.9rem; }
+            .hero h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>SAGRA COEUR</h1>
-    <p>Sua referência em serviços cartoriais no Brasil, estando na Europa.</p>
-</header>
+    <!-- Menu Superior Fixo -->
+    <header>
+        <div class="logo">SAGRA COEUR</div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Quem Somos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-<nav>
-    <a href="#quem-somos">Quem Somos</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-</nav>
+    <!-- Início / Hero -->
+    <section id="inicio" class="hero">
+        <h1>Soluções Cartoriais no Brasil <span>para Brasileiros na Europa</span></h1>
+        <p>Casamentos por procuração, certificados digitais, procurações públicas e trâmites de cartório civil sem precisar viajar.</p>
+        <a href="https://wa.me/393931667375?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20para%20serviços%20cartoriais." class="btn" target="_blank">Fazer Orçamento via WhatsApp</a>
+    </section>
 
-<section class="hero">
-    <h2>Agilidade e Segurança Jurídica</h2>
-    <p>Não precisa viajar para resolver pendências no Brasil. Nós fazemos por você.</p>
-    <a href="https://wa.me/393931667375" class="btn-whats">Iniciar Orçamento no WhatsApp</a>
-</section>
+    <!-- Quem Somos -->
+    <section id="sobre" class="about">
+        <div class="section-title">
+            <h2>Quem Somos</h2>
+        </div>
+        <div class="about-text">
+            <p>A <strong>SagraCoeur</strong> é especializada em aproximar você dos cartórios brasileiros estando na Europa. Sabemos o quanto a burocracia à distância pode ser complexa. Por isso, cuidamos de todo o processo legal com total segurança jurídica, transparência e agilidade para que você resolva suas pendências sem preocupação.</p>
+        </div>
+    </section>
 
-<section id="quem-somos" class="secao">
-    <h2>Quem Somos</h2>
-    <p>A SagraCoeur é especialista em trâmites cartoriais para brasileiros que residem no exterior. Garantimos processos ágeis com procuração e notariado, evitando burocracias desnecessárias e deslocamentos internacionais.</p>
-</section>
+    <!-- Serviços -->
+    <section id="servicos">
+        <div class="section-title">
+            <h2>Nossos Serviços</h2>
+            <p>Tudo o que você precisa em cartório geral e civil no Brasil</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Casamento por Procuração</h3>
+                <p>Realizamos todo o suporte jurídico e notarial para que o seu casamento no Brasil aconteça de forma legal e segura enquanto você está no exterior.</p>
+            </div>
+            <div class="service-card">
+                <h3>Procurações Públicas</h3>
+                <p>Elaboração de documentos para representação em transações imobiliárias, bancos, inventários e órgãos públicos no Brasil.</p>
+            </div>
+            <div class="service-card">
+                <h3>Certificado Digital</h3>
+                <p>Emissão e renovação de certificados digitais brasileiros (e-CPF e e-CNPJ) com atendimento assistido por videoconferência.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cartório Civil e Geral</h3>
+                <p>Segunda via de certidões, apostilamento de Haia, averbações e trâmites gerais em cartórios de todo o Brasil.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="servicos" class="secao" style="background: var(--cinza);">
-    <h2>Nossos Serviços</h2>
-    <div class="grid">
-        <div class="card"><h3>Casamento por Procuração</h3><p>Realizamos todo o trâmite jurídico para o seu casamento no Brasil.</p></div>
-        <div class="card"><h3>Certificado Digital</h3><p>Emissão e renovação facilitada para acesso a órgãos brasileiros.</p></div>
-        <div class="card"><h3>Procurações Públicas</h3><p>Documentação para representar você em bancos e imóveis no Brasil.</p></div>
-    </div>
-</section>
+    <!-- Contato -->
+    <section id="contato" class="contact">
+        <div class="section-title">
+            <h2>Entre em Contato</h2>
+            <p>Fale diretamente com nossa equipe</p>
+        </div>
+        <div class="contact-info">
+            <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
+            <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/sagracoeurcartorio" target="_blank" style="color: var(--azul-principal); text-decoration: none;">@sagracor</a></p>
+        </div>
+        <br>
+        <a href="https://wa.me/393931667375?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="btn" target="_blank">Fale Conosco no WhatsApp</a>
+    </section>
 
-<section id="contato" class="secao">
-    <h2>Contato Direto</h2>
-    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sagracoeurcartorio/" target="_blank">@sagracoeurcartorio</a></p>
-    <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
-    <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Sagra Coeur - Todos os direitos reservados.</p>
-</footer>
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 SagraCoeur - Todos os direitos reservados.</p>
+        <p style="margin-top: 0.5rem; color: var(--dourado);">Atendimento especializado na Europa</p>
+    </footer>
 
 </body>
 </html>
