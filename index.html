@@ -150,6 +150,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .service-card {
@@ -168,6 +169,27 @@
         .service-card h3 {
             color: var(--azul-principal);
             margin-bottom: 1rem;
+        }
+
+        /* Galeria de Imagens de Serviço */
+        .services-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .service-img:hover {
+            transform: scale(1.03);
         }
 
         /* Contato */
@@ -204,7 +226,7 @@
     <!-- Menu Superior Fixo -->
     <header>
         <div class="logo">
-            <img src="logo.jpg" alt="Logo SagraCoeur" class="logo-img">
+            <img src="LOGO.jfif" alt="Logo SagraCoeur" class="logo-img">
         </div>
         <nav>
             <a href="#inicio">Início</a>
@@ -227,7 +249,7 @@
             <h2>Quem Somos</h2>
         </div>
         <div class="about-container">
-            <img src="logo.jpg" alt="SagraCoeur Cartório & Consular Brasil" class="about-logo">
+            <img src="LOGO.jfif" alt="SagraCoeur Cartório & Consular Brasil" class="about-logo">
             <div class="about-text">
                 <p>A <strong>SagraCoeur</strong> é especializada em aproximar você dos cartórios brasileiros estando na Europa. Sabemos o quanto a burocracia à distância pode ser complexa. Por isso, cuidamos de todo o processo legal com total segurança jurídica, transparência e agilidade para que você resolva suas pendências sem preocupação.</p>
             </div>
@@ -257,6 +279,13 @@
                 <h3>Cartório Civil e Geral</h3>
                 <p>Segunda via de certidões, apostilamento de Haia, averbações e trâmites gerais em cartórios de todo o Brasil.</p>
             </div>
+        </div>
+
+        <!-- Imagens de Serviços Adicionais -->
+        <div class="services-gallery">
+            <img src="SERVISO (2).jpeg" alt="Transferência e Doação de Bens" class="service-img">
+            <img src="SERVISO (3).jpeg" alt="Autenticação de Documentos" class="service-img">
+            <img src="SERVISO (4).jpeg" alt="Autorização de Viagem para Menor" class="service-img">
         </div>
     </section>
 
