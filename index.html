@@ -149,19 +149,17 @@
         .services-grid {
             display: none; /* Escondido para dar lugar ao carrossel */
         }
-
-        <!-- Carrossel de Casamento -->
-        <div class="servicos-destaque">Casamento e Trâmites de Cartório Civil</div>
-        <div class="carousel-wrapper">
-            <div class="carousel-container">
-                <div class="carousel-slide"><img src="CASAMENTO.jpeg" alt="Casamento" class="service-img"></div>
-                <div class="carousel-slide"><img src="CASAMENTO 1.jpeg" alt="Casamento Passo 1" class="service-img"></div>
-                <div class="carousel-slide"><img src="CASAMENTO 2.jpeg" alt="Casamento Passo 2" class="service-img"></div>
-                <div class="carousel-slide"><img src="CASAMENTO 3.jpeg" alt="Casamento Passo 3" class="service-img"></div>
-            </div>
-            <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
-            <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
-        </div>
+        
+        /* ESTILOS DO CARROSSEL (Adicionados ao final do CSS original) */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Ajuste o tamanho máximo aqui */
+            margin: 0 auto 3rem auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        
 
         .carousel-slide {
             display: none;
@@ -301,29 +299,18 @@
             <p>Tudo o que você precisa em cartório geral e civil no Brasil</p>
         </div>
 
-        <!-- SEÇÃO DO CARROSSEL DE CASAMENTO (NOVA) -->
-        <div class="section-subtitle" style="text-align: center; margin-bottom: 1rem; font-weight: 600; color: var(--azul-principal);">Casamento por Procuração e Trâmites Civil</div>
-        
-        <div class="carousel-container">
-            <!-- Slides do Carrossel -->
-            <div class="carousel-slide carousel-fade">
-                <img src="CASAMENTO 1.jpeg" alt="Casamento 1">
+        <!-- Carrossel de Casamento -->
+        <div class="servicos-destaque">Casamento e Trâmites de Cartório Civil</div>
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <div class="carousel-slide"><img src="CASAMENTO.jpeg" alt="Casamento" class="service-img"></div>
+                <div class="carousel-slide"><img src="CASAMENTO 1.jpeg" alt="Casamento Passo 1" class="service-img"></div>
+                <div class="carousel-slide"><img src="CASAMENTO 2.jpeg" alt="Casamento Passo 2" class="service-img"></div>
+                <div class="carousel-slide"><img src="CASAMENTO 3.jpeg" alt="Casamento Passo 3" class="service-img"></div>
             </div>
-            <div class="carousel-slide carousel-fade">
-                <img src="CASAMENTO.jpeg" alt="Casamento Principal">
-            </div>
-            <div class="carousel-slide carousel-fade">
-                <img src="CASAMENTO 2.jpeg" alt="Casamento 2">
-            </div>
-            <div class="carousel-slide carousel-fade">
-                <img src="CASAMENTO 3.jpeg" alt="Casamento 3">
-            </div>
-
-            <!-- Botões de navegação -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
         </div>
-        <!-- FIM DO CARROSSEL -->
 
         <!-- Grade Antiga (Desativada via CSS, mas mantida no HTML para não alterar sua estrutura) -->
         <div class="services-grid">
