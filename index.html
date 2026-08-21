@@ -146,7 +146,7 @@
             flex: 1;
         }
 
-        /* Como Funciona (Novo) */
+        /* Como Funciona */
         .how-it-works {
             background-color: var(--cinza-claro);
         }
@@ -219,7 +219,7 @@
             transform: scale(1.03);
         }
 
-        /* FAQ / Perguntas Frequentes (Novo) */
+        /* FAQ / Perguntas Frequentes */
         .faq-section {
             background-color: var(--branco);
         }
@@ -272,12 +272,20 @@
             padding: 0 1.5rem 1.2rem 1.5rem;
         }
 
-        /* Rodapé de Contato */
+        /* Rodapé de Contato (Agora em Branco) */
         .contact-footer {
-            background-color: var(--azul-principal);
-            color: var(--branco);
+            background-color: var(--branco);
+            color: var(--texto-escuro);
             text-align: center;
-            padding: 3rem 10%;
+            padding: 4rem 10%;
+        }
+
+        .contact-footer .section-title h2 {
+            color: var(--azul-principal);
+        }
+
+        .contact-footer .section-title p {
+            color: var(--texto-escuro);
         }
         
         .contact-content {
@@ -286,6 +294,11 @@
             margin: 0 auto;
             font-size: 1.2rem;
             line-height: 1.8;
+            color: var(--texto-escuro);
+        }
+
+        .contact-content a {
+            color: var(--azul-principal);
         }
 
         .btn-contato-container {
@@ -293,14 +306,14 @@
             margin-top: 2rem;
         }
 
-        /* Copyright */
+        /* Copyright (Mantido em Azul Principal) */
         .footer-final {
             background-color: var(--azul-principal);
-            border-top: 1px solid rgba(255,255,255,0.1);
             color: var(--branco);
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem 1rem;
             font-size: 0.9rem;
+            border-top: 1px solid rgba(197, 168, 128, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -350,7 +363,7 @@
         </div>
     </section>
 
-    <!-- Como Funciona (Adicionado com base nas imagens) -->
+    <!-- Como Funciona -->
     <section id="como-funciona" class="how-it-works">
         <div class="section-title">
             <h2>Como Funciona</h2>
@@ -402,7 +415,7 @@
         </div>
     </section>
 
-    <!-- FAQ / Perguntas Frequentes (Adicionado com base nas imagens) -->
+    <!-- FAQ / Perguntas Frequentes -->
     <section id="faq" class="faq-section">
         <div class="section-title">
             <h2>Dúvidas Frequentes</h2>
@@ -424,29 +437,29 @@
         </div>
     </section>
 
-    <!-- Rodapé de Contato -->
+    <!-- Rodapé de Contato (Agora com fundo branco) -->
     <section id="contato" class="contact-footer">
-        <div class="section-title" style="color: var(--branco);">
+        <div class="section-title">
             <h2>Entre em Contato</h2>
             <p>Fale diretamente com nossa equipe</p>
         </div>
         <div class="contact-content">
             <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
             <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
-            <p><strong>Instagram:</strong> <a href="https://instagram.com/sagracoeurcartorio" target="_blank" style="color: var(--dourado); text-decoration: none;">@sagracoeurcartorio</a></p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/sagracoeurcartorio" target="_blank" style="color: var(--azul-principal); text-decoration: none;">@sagracoeurcartorio</a></p>
         </div>
         <div class="btn-contato-container">
             <a href="https://wa.me/393931667375?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." class="btn" target="_blank">Fale Conosco no WhatsApp</a>
         </div>
     </section>
 
-    <!-- Copyright -->
+    <!-- Rodapé Final (Mantido apenas este pedacinho em azul) -->
     <div class="footer-final">
         <p>&copy; 2026 SagraCoeur - Todos os direitos reservados.</p>
         <p style="margin-top: 0.5rem; color: var(--dourado);">Atendimento especializado na Europa</p>
     </div>
 
-    <!-- Script Simples para o Accordion do FAQ -->
+    <!-- Script para o Accordion do FAQ -->
     <script>
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
