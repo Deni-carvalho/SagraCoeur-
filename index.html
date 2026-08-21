@@ -29,11 +29,10 @@
             line-height: 1.6;
         }
 
-        /* Header */
+        /* Header - Alterado para rolar junto com a página */
         header {
             background-color: var(--azul-principal);
-            position: fixed;
-            top: 0;
+            position: relative;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -68,7 +67,7 @@
             background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: var(--branco);
             text-align: center;
-            padding: 9rem 5% 6rem 5%;
+            padding: 7rem 5% 6rem 5%;
         }
 
         .hero h1 {
@@ -272,7 +271,7 @@
             padding: 0 1.5rem 1.2rem 1.5rem;
         }
 
-        /* Rodapé de Contato (Agora em Branco) */
+        /* Rodapé de Contato */
         .contact-footer {
             background-color: var(--branco);
             color: var(--texto-escuro);
@@ -306,7 +305,7 @@
             margin-top: 2rem;
         }
 
-        /* Copyright (Mantido em Azul Principal) */
+        /* Rodapé Final */
         .footer-final {
             background-color: var(--azul-principal);
             color: var(--branco);
@@ -328,7 +327,7 @@
 </head>
 <body>
 
-    <!-- Menu Superior -->
+    <!-- Menu Superior (Agora rola junto com a página) -->
     <header>
         <div class="logo">
             <img src="LOGO.jfif" alt="Logo SagraCoeur" class="logo-img">
@@ -437,7 +436,7 @@
         </div>
     </section>
 
-    <!-- Rodapé de Contato (Agora com fundo branco) -->
+    <!-- Rodapé de Contato -->
     <section id="contato" class="contact-footer">
         <div class="section-title">
             <h2>Entre em Contato</h2>
@@ -453,7 +452,7 @@
         </div>
     </section>
 
-    <!-- Rodapé Final (Mantido apenas este pedacinho em azul) -->
+    <!-- Rodapé Final -->
     <div class="footer-final">
         <p>&copy; 2026 SagraCoeur - Todos os direitos reservados.</p>
         <p style="margin-top: 0.5rem; color: var(--dourado);">Atendimento especializado na Europa</p>
