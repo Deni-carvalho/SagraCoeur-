@@ -146,7 +146,7 @@
             flex: 1;
         }
 
-        /* Serviços Grid (Texto e Ícones/Imagens) */
+        /* Serviços Grid (Texto e Ícones/Imagens) - MODIFICADO */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -168,20 +168,26 @@
             transform: translateY(-5px);
         }
         
+        /* MODIFICAÇÃO: Imagem maior e margem inferior ajustada */
         .service-icon-img {
-            width: 80px;
-            height: 80px;
+            width: 150px; 
+            height: 150px; 
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem; 
         }
 
         .service-card h3 {
             color: var(--azul-principal);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* MODIFICAÇÃO: Parágrafo de descrição removido da exibição */
+        .service-card p {
+            display: none; 
         }
 
-        /* Galeria de Imagens Maiores (SERVISO.jpeg) */
+        /* Galeria de Imagens Maiores (SERVISO.jpeg) - Mantida */
         .services-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -202,7 +208,7 @@
             transform: scale(1.03);
         }
 
-        /* Rodapé de Contato (Centralizado) */
+        /* Rodapé de Contato (Centralizado) - MODIFICADO */
         .contact-footer {
             background-color: var(--azul-principal);
             color: var(--branco);
@@ -239,6 +245,11 @@
             .hero h1 { font-size: 2rem; }
             .about-container { flex-direction: column; text-align: center; }
             .contact-content { text-align: center; }
+            
+            /* MODIFICAÇÃO: Fonte do contato menor no mobile */
+            .contact-content p {
+                font-size: 1rem; 
+            }
         }
     </style>
 </head>
@@ -284,43 +295,51 @@
             <p>Tudo o que você precisa em cartório geral e civil no Brasil</p>
         </div>
         
-        <!-- Grade Principal de Serviços (usando suas imagens menores) -->
+        <!-- Grade Principal de Serviços (Imagens Maiores e sem texto de descrição) -->
         <div class="services-grid">
             <div class="service-card">
-                <img src="CASAMENTO .jpeg" alt="Cartório Civil" class="service-icon-img">
+                <img src="CASAMENTO .jpeg" alt="Casamento por Procuração" class="service-icon-img">
                 <h3>Casamento por Procuração</h3>
-                <p>Suporte jurídico para o seu casamento no Brasil com agilidade e segurança.</p>
+                <!-- Descrição removida -->
             </div>
             <div class="service-card">
-                <img src="SERVISO (3).jpeg" alt="Documentos" class="service-icon-img">
+                <img src="SERVISO (3).jpeg" alt="Procurações Públicas" class="service-icon-img">
                 <h3>Procurações Públicas</h3>
-                <p>Elaboração de documentos para representação no Brasil (imóveis, bancos, etc.).</p>
+                <!-- Descrição removida -->
             </div>
              <div class="service-card">
-                <img src="SERVISO (4).jpeg" alt="Certificados" class="service-icon-img">
+                <img src="SERVISO (4).jpeg" alt="Certificado Digital" class="service-icon-img">
                 <h3>Certificado Digital</h3>
-                <p>Emissão e renovação de certificados (e-CPF e e-CNPJ) via videoconferência.</p>
+                <!-- Descrição removida -->
             </div>
             <div class="service-card">
-                <img src="SERVISO (2).jpeg" alt="Bens e Imóveis" class="service-icon-img">
+                <img src="SERVISO (2).jpeg" alt="Cartório Civil e Geral" class="service-icon-img">
                 <h3>Cartório Civil e Geral</h3>
-                <p>Segunda via de certidões, apostilamento de Haia, averbações e trâmites em cartórios de todo o Brasil.</p>
+                <!-- Descrição removida -->
             </div>
             <div class="service-card">
                 <img src="CPF.jpeg" alt="Emissão de CPF" class="service-icon-img">
                 <h3>Emissão de CPF</h3>
-                <p>Emissão e renovação de certificados (e-CPF e e-CNPJ) via videoconferência.</p>
+                <!-- Descrição removida -->
             </div>
         </div>
-        </section>
-    
+        
+        <!-- Galeria de Imagens de Serviço (Mantida) -->
+        <div class="services-gallery" style="margin-top: 4rem;">
+            <img src="SERVISO.jpeg" alt="Serviço SagraCoeur 1" class="service-img">
+            <img src="SERVISO (3).jpeg" alt="Serviço SagraCoeur 2" class="service-img">
+            <img src="SERVISO (4).jpeg" alt="Serviço SagraCoeur 3" class="service-img">
+            <img src="SERVISO (2).jpeg" alt="Serviço SagraCoeur 4" class="service-img">
+        </div>
+    </section>
+
     <!-- Rodapé de Contato (Centralizado) -->
     <section id="contato" class="contact-footer">
         <div class="section-title" style="color: var(--branco);">
             <h2>Entre em Contato</h2>
             <p>Fale diretamente com nossa equipe</p>
         </div>
-        <!-- Bloco de informações centralizado -->
+        <!-- Bloco de informações centralizado (Fonte menor no mobile) -->
         <div class="contact-content">
             <p><strong>E-mail:</strong> sagracoeur@gmail.com</p>
             <p><strong>WhatsApp:</strong> +39 393 166 7375</p>
