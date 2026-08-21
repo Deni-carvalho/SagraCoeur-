@@ -150,16 +150,18 @@
             display: none; /* Escondido para dar lugar ao carrossel */
         }
 
-        /* ESTILOS DO CARROSSEL (Adicionados ao final do CSS original) */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px; /* Ajuste o tamanho máximo aqui */
-            margin: 0 auto 3rem auto;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
+        <!-- Carrossel de Casamento -->
+        <div class="servicos-destaque">Casamento e Trâmites de Cartório Civil</div>
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <div class="carousel-slide"><img src="CASAMENTO.jpeg" alt="Casamento" class="service-img"></div>
+                <div class="carousel-slide"><img src="CASAMENTO 1.jpeg" alt="Casamento Passo 1" class="service-img"></div>
+                <div class="carousel-slide"><img src="CASAMENTO 2.jpeg" alt="Casamento Passo 2" class="service-img"></div>
+                <div class="carousel-slide"><img src="CASAMENTO 3.jpeg" alt="Casamento Passo 3" class="service-img"></div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1, this)">&#10094;</button>
+            <button class="carousel-btn next" onclick="moveSlide(1, this)">&#10095;</button>
+        </div>
 
         .carousel-slide {
             display: none;
