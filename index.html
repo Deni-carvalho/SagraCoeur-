@@ -88,9 +88,9 @@
             transition: all 0.3s ease;
         }
 
-        /* Hero */
+        /* Hero com a nova imagem personalizada e camada escura suave para leitura */
         .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(15, 28, 48, 0.75), rgba(15, 28, 48, 0.85)), url('hero-bg.jpeg') no-repeat center center/cover;
             color: var(--branco);
             text-align: center;
             padding: 7rem 5% 6rem 5%;
@@ -209,7 +209,6 @@
             justify-content: center;
         }
 
-        /* Logo de Fundo no Número com Transparência */
         .step-bg-logo {
             position: absolute;
             width: 100%;
@@ -264,7 +263,6 @@
             transform: scale(1.03);
         }
 
-        /* Estilo do Carrossel do Casamento */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -346,7 +344,7 @@
             background-color: var(--dourado);
         }
 
-        /* FAQ / Perguntas Frequentes */
+        /* FAQ */
         .faq-section {
             background-color: var(--branco);
         }
@@ -411,10 +409,6 @@
             color: var(--azul-principal);
         }
 
-        .contact-footer .section-title p {
-            color: var(--texto-escuro);
-        }
-        
         .contact-content {
             display: inline-block;
             text-align: left;
@@ -433,7 +427,6 @@
             margin-top: 2rem;
         }
 
-        /* Rodapé Final */
         .footer-final {
             background-color: var(--azul-principal);
             color: var(--branco);
@@ -443,7 +436,6 @@
             border-top: 1px solid rgba(197, 168, 128, 0.2);
         }
 
-        /* Responsividade para Celular (Menu Hambúrguer) */
         @media (max-width: 768px) {
             header {
                 padding: 0.4rem 5%;
@@ -504,7 +496,7 @@
         </nav>
     </header>
 
-    <!-- Início / Hero -->
+    <!-- Início / Hero com a Nova Imagem Personalizada -->
     <section id="inicio" class="hero">
         <h1>Soluções Cartoriais no Brasil <span>para Brasileiros na Europa</span></h1>
         <p>Casamentos por procuração, certificados digitais, procurações públicas e trâmites de cartório civil sem precisar viajar.</p>
@@ -524,7 +516,7 @@
         </div>
     </section>
 
-    <!-- Como Funciona - Textos Diferenciados e Logotipo ao Fundo -->
+    <!-- Como Funciona -->
     <section id="como-funciona" class="how-it-works">
         <div class="section-title">
             <h2>Como Funciona</h2>
@@ -585,15 +577,13 @@
             <p>Tudo o que você precisa em cartório geral e civil no Brasil</p>
         </div>
            
-        <!-- Galeria de Serviços (Com o Carrossel na primeira posição) -->
         <div class="services-gallery">
-            <!-- Carrossel de Casamento (4 Imagens) -->
             <div class="carousel-container">
                 <div class="carousel-slides" id="carouselSlides">
                     <div class="carousel-slide"><img src="CASAMENTO .jpeg" alt="Casamento Exterior 1"></div>
-                    <div class="carousel-slide"><img src="CASAMENTO 1.jpeg" alt="Casamento Exterior 2"></div>
-                    <div class="carousel-slide"><img src="CASAMENTO 2.jpeg" alt="Casamento Exterior 3"></div>
-                    <div class="carousel-slide"><img src="CASAMENTO 3.jpeg" alt="Casamento Exterior 4"></div>
+                    <div class="carousel-slide"><img src="CASAMENTO-2.jpeg" alt="Casamento Exterior 2"></div>
+                    <div class="carousel-slide"><img src="CASAMENTO-3.jpeg" alt="Casamento Exterior 3"></div>
+                    <div class="carousel-slide"><img src="CASAMENTO-4.jpeg" alt="Casamento Exterior 4"></div>
                 </div>
                 <button class="carousel-btn carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
                 <button class="carousel-btn carousel-next" onclick="moveSlide(1)">&#10095;</button>
@@ -605,7 +595,6 @@
                 </div>
             </div>
 
-            <!-- Demais Imagens de Serviço -->
             <img src="SERVISO (3).jpeg" alt="Serviço SagraCoeur 2" class="service-img">
             <img src="SERVISO (4).jpeg" alt="Serviço SagraCoeur 3" class="service-img">
             <img src="SERVISO (2).jpeg" alt="Serviço SagraCoeur 4" class="service-img">
@@ -613,7 +602,7 @@
         </div>
     </section>
 
-    <!-- FAQ / Perguntas Frequentes -->
+    <!-- FAQ -->
     <section id="faq" class="faq-section">
         <div class="section-title">
             <h2>Dúvidas Frequentes</h2>
@@ -659,7 +648,6 @@
 
     <!-- Scripts -->
     <script>
-        // Menu Hambúrguer Mobile
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
 
@@ -671,7 +659,6 @@
             navMenu.classList.remove('active');
         }
 
-        // FAQ Accordion
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
@@ -684,7 +671,6 @@
             });
         });
 
-        // Carrossel de Imagens do Casamento
         let currentIndex = 0;
         const slides = document.getElementById('carouselSlides');
         const dots = document.querySelectorAll('.carousel-dots .dot');
